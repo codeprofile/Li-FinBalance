@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='main.css') }}">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='goal_index.css') }}">
+<body>
+<div class="row">
+<div class="col-md-12 board">
+    <div class="board-inner">
+        <ul class="nav nav-tabs" id="myTab">
+            <div class="liner"></div>
+            <li class="active">
+                 <a href="{{ url_for('create_profile')}}" aria-controls="home" id="create_profile" name="create_profile" >
+                    <span class="round-tabs one">
+                        <i class="icon icon-profile-male"></i>01
+                        <h4>Create Profile</h4>
+                    </span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="{{url_for('set_goal')}}" aria-controls="profile" id="set_goal" name="set_goal" >
+                    <span class="round-tabs two">
+                        <i class="icon icon-pencil"></i>02
+                        <h4>Set Goal</h4>
+                    </span>
+                </a>
+                 </li>
+            <li class="active">
+                <a href="{{url_for('goal_index')}}" aria-controls="prototyping" id="goal_plan" name="goal_plan" >
+                    <span class="round-tabs three">
+                        <i class="icon icon-layers"></i>03
+                        <h4>Goal Plan</h4>
+                    </span>
+                </a>
+            </li>
+ </ul>
+    </div>
+</div>
+</div>
+<div>
+    {% block content %}{% endblock %}
+</div>
+    </body>
+</html>

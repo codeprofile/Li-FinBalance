@@ -1,0 +1,60 @@
+{% extends "index.html" %}
+
+{% block content %}
+<div class="container bootstrap snippets bootdey">
+    <h3 class="text-primary">Set Goal</h3>
+      <hr>
+	<div class="row">
+      <!-- left column -->
+      <div class="col-md-3">
+        <div class="text-center">
+          <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="avatar img-circle img-thumbnail" alt="avatar">
+          <h6>Upload a different photo...</h6>
+
+          <input type="file" class="form-control">
+        </div>
+      </div>
+
+      <!-- edit form column -->
+      <div class="col-md-9 personal-info">
+        <div class="alert alert-info alert-dismissable">
+          <a class="panel-close close" data-dismiss="alert">×</a>
+          <i class="fa fa-coffee"></i>
+            Setting Goal is a Mandatory Step moving ahead.
+        </div>
+        <h3>Goal info</h3>
+
+        <form class="form-horizontal" role="form">
+           <div class="form-group">
+            <label class="col-lg-3 control-label">Goal Amount:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="number" value=50000>
+            </div>
+          </div>
+            <div class="form-group">
+            <label class="col-lg-3 control-label">Select Date:</label>
+            <div class="col-lg-8">
+            <input type="text" class="date form-control" value="dd-mm-yyyy" style="width: 200px" />
+                </div>
+                </div>
+          <div>
+         <button type="submit"  class="col-lg-4 btn btn-primary">Submit</button>
+            </div>
+        </form>
+      </div>
+
+
+  </div>
+
+</div>
+
+<hr>
+<script type="text/javascript">
+      $(".date").datepicker({
+        format: "dd-mm-yyyy",
+      });
+    </script>
+
+{% endblock %}
+
+

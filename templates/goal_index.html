@@ -1,0 +1,91 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<div class="container bootstrap snippets bootdey">
+    <h3 class="text-primary">Goal Plan</h3>
+      <hr>
+	<div class="row">
+      <!-- left column -->
+      <div class="col-md-3">
+        <div class="text-center">
+          <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="avatar img-circle img-thumbnail" alt="avatar">
+          <h6>Upload a different photo...</h6>
+
+          <input type="file" class="form-control">
+        </div>
+      </div>
+
+
+      <!-- edit form column -->
+      <div class="col-md-9 personal-info">
+        <div class="alert alert-info alert-dismissable">
+          <a class="panel-close close" data-dismiss="alert">×</a>
+          <i class="fa fa-coffee"></i>
+            Setting Goal is a Mandatory Step moving ahead.
+        </div>
+
+
+<div class="container">
+
+          <!--small cards-->
+        <div class="row">
+            <div class="col-md-4">
+        		<div class="card">
+                    <div class="card-content">
+                    	<div class="card-header-blue">
+                           <h1 class="card-heading">Eligible Plan</h1>
+                       	</div>
+                       	<div class="card-body">
+                     	  <p class="card-p">
+                                After Analysing your Profile and Goal Amount we recommend you below plan
+                            </p>
+                     	</div>
+
+                     	<nav class="nav-tabs">
+                     		<ul class="nav nav-pills pull-left">
+                                <li class="card-action md-8"><a href="{{url_for('eligible_plan')}}">Click to See Plan</a></li>
+                            </ul>
+
+                     	</nav>
+
+                    </div>
+                </div>
+           	</div>
+        <div class="col-md-4">
+        	<div class="card">
+                    <div class="card-content">
+                    	<div class="card-header-orange">
+                           <h1 class="card-heading">Not Eligible Plan</h1>
+                       	</div>
+                       	<div class="card-body">
+                     	  <p class="card-p">
+                                Though This Plan is not Eligible at the moment to your profile . but we will plan are way towards it .
+
+                            </p>
+                     	</div>
+                     	<nav class="nav-tabs">
+                     		<ul class="nav nav-pills pull-left">
+                                <li><a class="card-action md-4"  href="#">Click to See Plan</a></li>
+                            </ul>
+
+                     	</nav>
+
+                    </div>
+                </div>
+        </div>
+        </div>
+        </div>
+        </div>
+	</div>
+</div>
+
+
+
+
+  </div>
+
+</div>
+
+<hr>
+{% endblock %}

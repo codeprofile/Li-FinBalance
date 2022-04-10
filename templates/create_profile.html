@@ -1,0 +1,193 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="container bootstrap snippets bootdey">
+    <h3 class="text-primary">Create Profile</h3>
+      <hr>
+	<div class="row">
+      <!-- left column -->
+      <div class="col-md-3">
+        <div class="text-center">
+          <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="avatar img-circle img-thumbnail" alt="avatar">
+          <h6>Upload a different photo...</h6>
+
+          <input type="file" class="form-control">
+        </div>
+      </div>
+
+      <!-- edit form column -->
+      <div class="col-md-9 personal-info">
+        <div class="alert alert-info alert-dismissable">
+          <a class="panel-close close" data-dismiss="alert">×</a>
+          <i class="fa fa-coffee"></i>
+            Create Profile is a Mandatory Step moving ahead.
+        </div>
+        <h3>Personal info</h3>
+
+        <form method="post" action="{{ url_for('classify')}}" class="form-horizontal" role="form">
+           <div class="form-group">
+            <label class="col-lg-3 control-label">Employement Type:</label>
+            <div class="col-lg-8">
+              <div class="ui-select">
+                <select id="user_time_zone" class="form-control">
+                  <option value="salaried">Salaried</option>
+                  <option value="self_employment">Self Employed</option>
+                </select>
+              </div>
+            </div>
+          </div>
+           <div class="form-group">
+            <label class="col-lg-3 control-label">Income Amount + Other Income Source Amount: :</label>
+            <div class="col-lg-8">
+              <input class="form-control" name ="income" type="number" value=50000>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">PAN Details:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" value="ABCDE1234F">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Full Name :</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" value="Full Name as per PAN Card">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label" name = "FIRST_PROPERTY">Residential Status</label>
+            <div class="col-lg-8">
+              <div class="ui-select">
+                <select id="FIRST_PROPERTY" class="form-control">
+                  <option value=1>OWNED BY YOU</option>
+                  <option value=0>OWNED BY OTHER</option>
+                  <option value=0>RENTED</option>
+                </select>
+              </div>
+            </div>
+            </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Any Greater than 60? </label>
+            <div class="col-lg-8">
+              <div class="ui-select">
+                <select id="AGE_GTE_60" class="form-control">
+                  <option value=1>YES</option>
+                  <option value=0>NO</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label" name="SPECIFIC_ILLNESS">Any Critical illness? </label>
+            <div class="col-lg-8">
+              <div class="ui-select">
+                <select id="SPECIFIC_ILLNESS" class="form-control">
+                  <option value=1>YES</option>
+                  <option value=0>NO</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Any Disability ? </label>
+            <div class="col-lg-8">
+              <div class="ui-select">
+                <select id="DISABILITY_STATUS" class="form-control">
+                  <option value=1>YES</option>
+                  <option value=0>NO</option>
+                </select>
+              </div>
+            </div>
+            </div>
+             <div class="form-group">
+            <label class="col-lg-3 control-label">Received Interest of Saving Account Below 10k?</label>
+            <div class="col-lg-8">
+              <div class="ui-select">
+                <select id="INTEREST_ON_SAVINGS_ACCOUNT_BELOW_10K" class="form-control">
+                  <option value=1>YES</option>
+                  <option value=0>NO</option>
+                </select>
+              </div>
+            </div>
+             </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Any Medical Expense this year?</label>
+            <div class="col-lg-8">
+              <div class="ui-select">
+                <select id="MEDICAL_EXPENSE" class="form-control">
+                  <option value=1>YES</option>
+                  <option value=0>NO</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Under Education Loan ? </label>
+            <div class="col-lg-8">
+              <div class="ui-select">
+                <select id="EDUCATION_LOAN" class="form-control">
+                  <option value=1>YES</option>
+                  <option value=0>NO</option>
+                </select>
+              </div>
+            </div>
+            </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Education Loan less than 8 years ? </label>
+            <div class="col-lg-8">
+              <div class="ui-select">
+                <select id="EDUCATION_LOAN_PERIOD_LTE_8" class="form-control">
+                  <option value=1>YES</option>
+                  <option value=0>NO</option>
+                </select>
+              </div>
+            </div>
+            </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Contribution in any of the Below list ?</label>
+            <div class="col-lg-8">
+              <div class="ui-select">
+                <select id="80C" name="80C" class="form-control">
+                  <option value="LIFE_INSURANCE_PREMIUM">LIFE INSURANCE PREMIUM</option>
+                  <option value="PPF" name="PPF">PPF</option>
+                  <option value="NPS_CONTRIBUTION">NPS</option>
+                  <option value="TUTION_FEE_2_CHILDREN">TUTION FEE FOR CHILDREN</option>
+                  <option value="TAX_SAVING_FD">FD GREATER THAN 5YRS</option>
+                  <option value="EPF_VPF_CONTRIBUTION">EPF OR VPF CONTRIBUTION</option>
+                </select>
+              </div>
+            </div>
+            </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Any Current Property Loan ?</label>
+            <div class="col-lg-8">
+              <div class="ui-select">
+                <select id="PROPERTY_LOAN" class="form-control">
+                  <option value=1>YES</option>
+                  <option value=0>NO</option>
+                </select>
+              </div>
+            </div>
+            </div>
+
+
+         <button type="submit"  class="col-lg-4 btn btn-primary" value="Submit">Submit</button>
+
+        </form>
+      </div>
+<script>
+
+  {% if context%}
+  {{context}}
+  alert({{message}})
+  {% endif %}
+</script>
+
+  </div>
+
+</div>
+
+<hr>
+
+
+{% endblock %}
+
