@@ -1,0 +1,35 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="container bootstrap snippets bootdey">
+    <h3 class="text-primary">Create Profile</h3>
+      <hr>
+	<div class="row">
+      <!-- left column -->
+      <div class="col-md-3">
+        <div class="text-center">
+          <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="avatar img-circle img-thumbnail" alt="avatar">
+        </div>
+      </div>
+
+      <!-- edit form column -->
+      <div class="col-md-9 personal-info">
+        <div class="alert alert-info alert-dismissable">
+          <a class="panel-close close" data-dismiss="alert">×</a>
+          <i class="fa fa-coffee"></i>
+            Create Profile is a Mandatory Step moving ahead.
+        </div>
+        <h3>Personal info</h3>
+
+        {% for message in get_flashed_messages() %}
+        <div class="alert alert-info alert-dismissable">
+          <a class="panel-close close" data-dismiss="alert">×</a>
+          <i class="fa fa-coffee"></i>
+         <h2 style="text-align:center">{{ message }}</h2>
+          <h4 style="text-color:black ; text-align:center">Move Ahead to set Goal : <a class="btn btn-primary btn-lg" href="{{url_for('set_goal')}}">Click here</a></h4>
+        </div>
+          {% endfor %}
+      </div>
+</div>
+</div>
+
+{% endblock  %}

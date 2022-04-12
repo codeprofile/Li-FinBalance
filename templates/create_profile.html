@@ -22,7 +22,6 @@
             Create Profile is a Mandatory Step moving ahead.
         </div>
         <h3>Personal info</h3>
-
         <form method="post" action="{{ url_for('classify')}}" class="form-horizontal" role="form">
            <div class="form-group">
             <label class="col-lg-3 control-label">Employement Type:</label>
@@ -173,20 +172,16 @@
          <button type="submit"  class="col-lg-4 btn btn-primary" value="Submit">Submit</button>
 
         </form>
-      </div>
-<script>
 
-  {% if context%}
-  {{context}}
-  alert({{message}})
-  {% endif %}
-</script>
+      </div>
+
 
   </div>
 
 </div>
 
 <hr>
+
 
 
 {% endblock %}
